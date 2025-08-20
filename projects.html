@@ -21,49 +21,48 @@
       color: inherit;
     }
 
-    /* ===== Floating Header ===== */
+    /* Header */
     header {
-      background: rgba(13, 44, 84, 0.95);
+      background: #0d2c54; /* Deep construction blue */
       color: #fff;
-      padding: 14px 24px;
+      padding: 20px 40px;
       display: flex;
       justify-content: space-between;
       align-items: center;
       box-shadow: 0 4px 20px rgba(0,0,0,0.25);
       position: fixed;
-      top: 8%;
+      top: 8.0%;
       left: 50%;
       transform: translate(-50%, -50%);
       border-radius: 50px;
-      width: 90%;
+      width: 85%;
       max-width: 1200px;
       z-index: 1000;
       backdrop-filter: blur(8px);
+      background: transparent;/* linear-gradient(135deg, #0d2c54, #f5862b); /* Construction theme: Blue + Orange */
     }
 
     .logo-container {
       display: flex;
       align-items: center;
-      gap: 10px;
+      gap: 12px;
     }
 
     .logo-container img {
-      height: 40px;
+      height: 45px;
       width: auto;
       border-radius: 6px;
     }
 
     .logo-container h1 {
-      font-size: 18px;
+      font-size: 22px;
       margin: 0;
       letter-spacing: 1px;
-      white-space: nowrap;
     }
 
     nav {
       display: flex;
       gap: 18px;
-      transition: all 0.3s ease;
     }
 
     nav a {
@@ -77,61 +76,12 @@
       color: #f4a261;
       border-bottom: 2px solid #f4a261;
     }
-
     nav a.active {
       color: #f4a261;
       border-bottom: 2px solid #f4a261;
     }
 
-    /* ===== Hamburger Button ===== */
-    .menu-toggle {
-      display: none;
-      font-size: 28px;
-      color: #fff;
-      background: none;
-      border: none;
-      cursor: pointer;
-    }
-
-    /* ===== Mobile Menu ===== */
-    @media (max-width: 768px) {
-      header {
-        flex-wrap: wrap;
-        border-radius: 25px;
-      }
-
-      .menu-toggle {
-        display: block;
-      }
-
-      nav {
-        display: none;
-        flex-direction: column;
-        width: 100%;
-        background: rgba(13, 44, 84, 0.98);
-        border-radius: 15px;
-        margin-top: 12px;
-        padding: 10px 0;
-      }
-
-      nav a {
-        padding: 12px;
-        text-align: center;
-        width: 100%;
-        display: block;
-        border-bottom: 1px solid rgba(255,255,255,0.15);
-      }
-
-      nav a:last-child {
-        border-bottom: none;
-      }
-
-      nav.active {
-        display: flex;
-      }
-    }
-
-    /* ===== Hero Section ===== */
+    /* Hero Section */
     .hero {
       background: linear-gradient(rgba(13,44,84,0.7), rgba(13,44,84,0.7)),
         url('assets/images/aligned.jpg') no-repeat center center/cover;
@@ -150,7 +100,7 @@
       font-size: 18px;
     }
 
-    /* ===== Projects Gallery ===== */
+    /* Projects Gallery */
     .gallery {
       padding: 60px 20px;
       max-width: 1200px;
@@ -213,7 +163,7 @@
       color: #f4a261;
     }
 
-    /* ===== CTA Section ===== */
+    /* CTA Section */
     .cta {
       background: #0d2c54;
       color: #fff;
@@ -241,8 +191,8 @@
       background: #e76f51;
     }
 
-    /* ===== Footer ===== */
-    footer {
+        /* Footer */
+        footer {
       background: #0d2c54;
       color: #fff;
       padding: 40px 20px 20px;
@@ -328,7 +278,6 @@
       <img src="assets/images/logo.png" alt="Company Logo">
       <h1>NEFFREY INTERNATIONAL LIMITED</h1>
     </div>
-    <button class="menu-toggle"><i class="bi bi-list"></i></button>
     <nav>
       <a href="index.html">Home</a>
       <a href="about.html">About</a>
@@ -356,7 +305,7 @@
         </div>
       </div>
       <div class="gallery-item">
-        <img src="assets/images/deliv.jpg" alt="Dumping Project">
+        <img src="assets/images/deliv.jpg">
         <div class="gallery-info">
           <h4>Dumping & Waste Removal</h4>
           <p>Safe disposal of construction debris and soil.</p>
@@ -370,14 +319,14 @@
         </div>
       </div>
       <div class="gallery-item">
-        <img src="assets/images/road t.jpg" alt="Roadworks">
+        <img src="assets/images/road t.jpg">
         <div class="gallery-info">
           <h4>Roadworks</h4>
           <p>Grading & site preparation for access roads.</p>
         </div>
       </div>
       <div class="gallery-item">
-        <img src="assets/images/equipment.jpg" alt="Equipment Hire">
+        <img src="assets/images/equipment.jpg">
         <div class="gallery-info">
           <h4>Equipment Hire</h4>
           <p>Providing heavy machinery with skilled operators.</p>
@@ -427,14 +376,5 @@
     </div>
   </footer>
 
-  <!-- Script for Hamburger Menu -->
-  <script>
-    const toggleBtn = document.querySelector('.menu-toggle');
-    const nav = document.querySelector('nav');
-
-    toggleBtn.addEventListener('click', () => {
-      nav.classList.toggle('active');
-    });
-  </script>
 </body>
 </html>
