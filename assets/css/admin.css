@@ -1,0 +1,14 @@
+/* Admin Table Styling */
+table th, table td {
+    vertical-align: middle;
+}
+
+/* Admin Buttons */
+.btn {
+    border-radius: 5px;
+}
+
+/* Admin Cards */
+.card {
+    border-radius: 10px;
+}

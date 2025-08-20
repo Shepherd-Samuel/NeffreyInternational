@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+  <!-- Primary SEO -->
+  <title>Samuel Mutava — Web & Database Developer in Kenya | Elite Techs</title>
+  <meta name="description" content="Portfolio of Samuel Mutava, a Kenyan web & database developer and founder of Elite Techs. I build fast, secure, and scalable web systems, elegant databases, and insightful dashboards. View projects, stack, and contact details." />
+  <meta name="author" content="Samuel Mutava" />
+  <link rel="canonical" href="https://devportfolio-bkhj.onrender.com/" />
+
+  <!-- Locale / Hreflang (adjust if your main audience differs) -->
+  <link rel="alternate" href="https://myportfolio-admi.onrender.com/" hreflang="en-ke" />
+  <link rel="alternate" href="https://devportfolio-bkhj.onrender.com/" hreflang="x-default" />
+
+  <!-- Open Graph (Facebook, LinkedIn, WhatsApp) -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Samuel Mutava — Web & Database Developer in Kenya" />
+  <meta property="og:description" content="I build reliable web apps, scalable databases, and analytics dashboards. Browse my projects and get in touch." />
+  <meta property="og:url" content="https://devportfolio-bkhj.onrender.com/" />
+  <!-- Create this 1200x630 image and upload it -->
+  <meta property="og:image" content="https://devportfolio-bkhj.onrender.com/images/your-photo.jpg" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+
+  <!-- Twitter Cards -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Samuel Mutava — Web & Database Developer in Kenya" />
+  <meta name="twitter:description" content="I build reliable web apps, scalable databases, and analytics dashboards. Browse my projects and get in touch." />
+  <meta name="twitter:image" content="https://devportfolio-bkhj.onrender.com/images/your-photo.jpg" />
+
+  <!-- PWA / Icons (optional but nice) -->
+  <link rel="icon" href="/favicon.ico" sizes="any">
+  <link rel="icon" href="/icons/icon-32.png" type="image/png">
+  <link rel="apple-touch-icon" href="/icons/apple-touch-icon.png">
+  <meta name="theme-color" content="#0f172a" />
+
+  <!-- Preconnect for speed -->
+  <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+  <link rel="stylesheet" href="css/home.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
+
+  <!-- Structured Data (JSON-LD) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Samuel Mutava",
+    "jobTitle": "Web & Database Developer",
+    "url": "https://devportfolio-bkhj.onrender.com/",
+    "email": "mailto:mutavatosh@gmail.com",
+    "worksFor": { "@type": "Organization", "name": "Elite Techs" },
+    "address": { "@type": "PostalAddress", "addressCountry": "KE" },
+    "sameAs": [
+      "https://github.com/Shepherd-Samuel",
+      "https://www.linkedin.com/in/samuel-mutava",
+      "https://twitter.com/mutavasamuel1"
+    ]
+  }
+  </script>
+</head>
+<body>
+
+  <!-- Skip link for accessibility -->
+  <a class="skip-link" href="#content">Skip to content</a>
+
+  <!-- Header -->
+  <header class="site-header" role="banner">
+    <div class="container">
+      <div class="logo"><a href="/" aria-label="Go to home">Samuel Mutava</a></div>
+      <nav class="navbar" aria-label="Primary navigation">
+        <ul role="list">
+          <li><a href="index.html" class="active">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="projects.html">Projects</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="content">
+    <!-- Home Section -->
+    <section class="home-section">
+      <div class="container home-grid">
+        <div class="intro-text">
+          <h1>Hello, I'm <span>Samuel Mutava</span></h1>
+          <p>
+            Founder of <strong>Elite Techs</strong>. I specialize in <em>web development</em> and <em>database systems</em>
+            that are scalable, elegant, and efficient. Let’s turn your digital idea into reality.
+          </p>
+          <a href="projects.html" class="btn-primary">Explore My Work</a>
+        </div>
+        <div class="intro-image">
+          <!-- Keep hero eager for LCP; include width/height to avoid CLS -->
+          <img src="images/your-photo.jpg"
+               alt="Portrait of Samuel Mutava"
+               width="640" height="640"
+               decoding="async" fetchpriority="high">
+        </div>
+      </div>
+    </section>
+
+    <!-- Highlights Section -->
+    <section class="highlights">
+      <div class="container">
+        <h2 class="section-title">What I Do Best</h2>
+        <div class="highlight-grid">
+          <div class="highlight-card">
+            <i class="bi bi-code-slash" aria-hidden="true"></i>
+            <h3>Custom Web Apps</h3>
+            <p>Full-stack web systems built for performance and reliability, tailored to your needs.</p>
+          </div>
+          <div class="highlight-card">
+            <i class="bi bi-hdd-network" aria-hidden="true"></i>
+            <h3>Database Design</h3>
+            <p>Efficient, scalable database structures for data-driven applications and business logic.</p>
+          </div>
+          <div class="highlight-card">
+            <i class="bi bi-bar-chart-fill" aria-hidden="true"></i>
+            <h3>Analytics & Dashboards</h3>
+            <p>Interactive dashboards and reports that give insights into your system's data.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Slideshow Section -->
+    <section class="home-slider">
+      <div class="container">
+        <h2 class="section-title">What I Offer</h2>
+        <div class="slider-cards" role="list">
+          <div class="slider-card" role="listitem">
+            <h3><i class="bi bi-laptop" aria-hidden="true"></i> Responsive Design</h3>
+            <p>Mobile-first, cross-browser compatible interfaces for modern devices.</p>
+          </div>
+          <div class="slider-card" role="listitem">
+            <h3><i class="bi bi-shield-check" aria-hidden="true"></i> Secure Systems</h3>
+            <p>Security best practices embedded at every level of your application.</p>
+          </div>
+          <div class="slider-card" role="listitem">
+            <h3><i class="bi bi-rocket-takeoff" aria-hidden="true"></i> Performance Optimization</h3>
+            <p>Fast-loading apps with efficient backend and frontend architecture.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div class="footer-about">
+        <h3>Elite Techs</h3>
+        <p>Delivering smart web and database solutions since 2024.</p>
+      </div>
+      <div class="footer-links">
+        <h4>Quick Links</h4>
+        <ul role="list">
+          <li><a href="about.html"><i class="bi bi-person-circle" aria-hidden="true"></i> About Me</a></li>
+          <li><a href="projects.html"><i class="bi bi-folder-check" aria-hidden="true"></i> My Projects</a></li>
+          <li><a href="contact.html"><i class="bi bi-envelope-at" aria-hidden="true"></i> Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer-contact">
+        <h4>Find Me</h4>
+        <p><i class="bi bi-envelope-at-fill" aria-hidden="true"></i> <a href="mailto:mutavatosh@gmail.com">samuel@elitetechs.co.ke</a></p>
+        <p><i class="bi bi-telephone-fill" aria-hidden="true"></i> <a href="tel:+254755703469">+254755703469</a></p>
+        <p>
+          <a href="https://wa.me/254755703469" target="_blank" rel="noopener">
+            <i class="bi bi-whatsapp" aria-hidden="true"></i> WhatsApp
+          </a>
+        </p>
+        <div class="social-icons" aria-label="Social profiles">
+          <a href="https://github.com/Shepherd-Samuel" aria-label="GitHub"><i class="bi bi-github" aria-hidden="true"></i></a>
+          <a href="https://www.linkedin.com/in/samuel-mutava" aria-label="LinkedIn"><i class="bi bi-linkedin" aria-hidden="true"></i></a>
+          <a href="https://twitter.com/mutavasamuel1" aria-label="Twitter/X"><i class="bi bi-twitter-x" aria-hidden="true"></i></a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">© 2025 Samuel Mutava · All Rights Reserved.</div>
+  </footer>
+</body>
+</html>

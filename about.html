@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NEFFREY INTERNATIONAL LIMITED | About</title>
+
+  <!-- Bootstrap Icons -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
+
+  <style>
+    /* ===== Global Styles ===== */
+    body {
+      margin: 0;
+      font-family: "Segoe UI", Arial, sans-serif;
+      line-height: 1.6;
+      background-color: #f4f4f4;
+      color: #333;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    /* Floating Header */
+    header {
+      background: #0d2c54; /* Deep construction blue */
+      color: #fff;
+      padding: 20px 40px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.25);
+      position: fixed;
+      top: 8.0%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      border-radius: 50px;
+      width: 85%;
+      max-width: 1200px;
+      z-index: 1000;
+      backdrop-filter: blur(8px);
+      background: transparent;/* linear-gradient(135deg, #0d2c54, #f5862b); /* Construction theme: Blue + Orange */
+    }
+
+    .logo-container {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .logo-container img {
+      height: 45px;
+      width: auto;
+      border-radius: 10px;
+      border: 2px solid #fff;
+    }
+
+    .logo-container h1 {
+      font-size: 20px;
+      margin: 0;
+      letter-spacing: 1px;
+      color: #fff;
+      font-weight: bold;
+    }
+
+    nav {
+      display: flex;
+      gap: 20px;
+    }
+
+    nav a {
+      font-weight: 600;
+      color: #fff;
+      transition: color 0.3s ease, border-bottom 0.3s ease;
+      padding-bottom: 4px;
+    }
+
+    nav a:hover {
+      color: #ffe066; /* Golden highlight */
+      border-bottom: 2px solid #ffe066;
+    }
+    nav a.active {
+      color: #ffe066;
+      border-bottom: 2px solid #ffe066;
+    }
+
+    /* Push down hero so it's not blocked by header */
+    .hero {
+      background: linear-gradient(rgba(13,44,84,0.75), rgba(13,44,84,0.75)),
+        url('assets/images/construction-site.jpg') no-repeat center center/cover;
+      color: white;
+      padding: 220px 20px 100px; /* Extra top padding for floating header */
+      text-align: center;
+    }
+
+    .hero h2 {
+      font-size: 42px;
+      margin-bottom: 10px;
+      text-shadow: 2px 2px 6px rgba(0,0,0,0.6);
+    }
+
+    .hero p {
+      font-size: 18px;
+      opacity: 0.9;
+    }
+
+    /* About Content */
+    .about-content {
+      max-width: 1100px;
+      margin: 60px auto;
+      padding: 0 20px;
+    }
+
+    .about-content h3 {
+      font-size: 26px;
+      color: #0d2c54;
+      margin-bottom: 12px;
+    }
+
+    .about-content p {
+      font-size: 17px;
+      margin-bottom: 25px;
+      color: #555;
+    }
+
+    /* Values Section */
+    .values {
+      background: #fff;
+      padding: 60px 20px;
+    }
+
+    .values h3 {
+      text-align: center;
+      font-size: 28px;
+      color: #0d2c54;
+      margin-bottom: 40px;
+    }
+
+    .values-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 25px;
+      max-width: 1100px;
+      margin: auto;
+    }
+
+    .value-card {
+      background: #fafafa;
+      padding: 25px;
+      text-align: center;
+      border-radius: 12px;
+      box-shadow: 0 3px 8px rgba(0,0,0,0.1);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .value-card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 5px 14px rgba(0,0,0,0.2);
+    }
+
+    .value-icon {
+      font-size: 40px;
+      color: #f4a261;
+      margin-bottom: 10px;
+    }
+
+    .value-card h4 {
+      color: #0d2c54;
+      margin-bottom: 8px;
+    }
+
+    .value-card p {
+      color: #666;
+      font-size: 15px;
+    }
+
+    /* Footer */
+    footer {
+      background: #0d2c54;
+      color: #fff;
+      padding: 40px 20px 20px;
+    }
+
+    .footer-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 30px;
+      max-width: 1100px;
+      margin: auto;
+    }
+
+    .footer-grid h4 {
+      margin-bottom: 12px;
+      font-size: 17px;
+      border-bottom: 2px solid #f4a261;
+      display: inline-block;
+      padding-bottom: 4px;
+    }
+
+    .footer-grid p,
+    .footer-grid ul {
+      font-size: 14px;
+      line-height: 1.6;
+    }
+
+    .footer-grid ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    .footer-grid ul li {
+      margin: 8px 0;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .footer-grid ul li i {
+      color: #f4a261;
+    }
+
+    .footer-grid ul li a {
+      color: #ddd;
+      transition: color 0.3s ease;
+    }
+
+    .footer-grid ul li a:hover {
+      color: #f4a261;
+    }
+
+    .social-icons {
+      display: flex;
+      gap: 12px;
+      margin-top: 12px;
+    }
+
+    .social-icons a {
+      color: #fff;
+      font-size: 20px;
+      transition: color 0.3s ease;
+    }
+
+    .social-icons a:hover {
+      color: #f4a261;
+    }
+
+    .footer-bottom {
+      text-align: center;
+      margin-top: 20px;
+      border-top: 1px solid rgba(255,255,255,0.2);
+      padding-top: 10px;
+      font-size: 13px;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header -->
+  <header>
+    <div class="logo-container">
+      <img src="assets/images/logo.png" alt="Company Logo">
+      <h1>NEFFREY INTERNATIONAL LIMITED</h1>
+    </div>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="about.html" class="active">About</a>
+      <a href="services.html">Services</a>
+      <a href="projects.html">Projects</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <h2>About Us</h2>
+    <p>Get to know our story, mission, and what drives us forward.</p>
+  </section>
+
+  <!-- About Content -->
+  <section class="about-content">
+    <h3>Who We Are</h3>
+    <p>
+      At NEFFREY INTERNATIONAL LIMITED, we pride ourselves on being a trusted partner in the 
+      construction industry, specializing in high-quality building materials, excavation, 
+      and dumping services. Our reputation has been built on a foundation of reliability, 
+      innovation, and client satisfaction.
+    </p>
+
+    <h3>Our Mission</h3>
+    <p>
+      To provide sustainable and reliable construction solutions that empower communities 
+      and contribute to infrastructural growth and development.
+    </p>
+
+    <h3>Our Vision</h3>
+    <p>
+      To be the leading provider of construction materials and services in the region, 
+      recognized for our quality, integrity, and impact.
+    </p>
+  </section>
+
+  <!-- Core Values -->
+  <section class="values">
+    <h3>Our Core Values</h3>
+    <div class="values-grid">
+      <div class="value-card">
+        <i class="bi bi-shield-check value-icon"></i>
+        <h4>Integrity</h4>
+        <p>We uphold the highest ethical standards in every project we deliver.</p>
+      </div>
+      <div class="value-card">
+        <i class="bi bi-people value-icon"></i>
+        <h4>Teamwork</h4>
+        <p>Collaboration and respect form the backbone of our operations.</p>
+      </div>
+      <div class="value-card">
+        <i class="bi bi-lightning-charge value-icon"></i>
+        <h4>Efficiency</h4>
+        <p>We complete projects with precision, speed, and professionalism.</p>
+      </div>
+      <div class="value-card">
+        <i class="bi bi-globe2 value-icon"></i>
+        <h4>Sustainability</h4>
+        <p>We prioritize eco-friendly practices for a better future.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="footer-grid">
+      <div>
+        <h4>About Us</h4>
+        <p>NEFFREY INTERNATIONAL LIMITED delivers trusted construction solutions across Kenya with professionalism and excellence.</p>
+      </div>
+      <div>
+        <h4>Quick Links</h4>
+        <ul>
+          <li><i class="bi bi-house"></i> <a href="index.html">Home</a></li>
+          <li><i class="bi bi-info-circle"></i> <a href="about.html">About</a></li>
+          <li><i class="bi bi-gear"></i> <a href="services.html">Services</a></li>
+          <li><i class="bi bi-building"></i> <a href="projects.html">Projects</a></li>
+          <li><i class="bi bi-envelope"></i> <a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Contact</h4>
+        <p><i class="bi bi-geo-alt"></i> Nairobi, Kenya</p>
+        <p><i class="bi bi-telephone"></i> +254 700 123 456</p>
+        <p><i class="bi bi-envelope"></i> info@neffrey.com</p>
+        <div class="social-icons">
+          <a href="#"><i class="bi bi-facebook"></i></a>
+          <a href="#"><i class="bi bi-twitter"></i></a>
+          <a href="#"><i class="bi bi-linkedin"></i></a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2025 NEFFREY INTERNATIONAL LIMITED | All Rights Reserved</p>
+    </div>
+  </footer>
+
+</body>
+</html>

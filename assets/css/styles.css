@@ -1,0 +1,24 @@
+/* General site styles */
+body {
+    font-family: Arial, sans-serif;
+}
+
+/* Hero Section */
+.hero {
+    background: url('../images/hero-books.jpg') center/cover no-repeat;
+    height: 400px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    text-shadow: 2px 2px 5px rgba(0,0,0,0.7);
+}
+.hero h1 {
+    font-size: 3rem;
+}
+
+/* Book Cards */
+.book-card img {
+    height: 250px;
+    object-fit: cover;
+}
