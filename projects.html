@@ -1,131 +1,323 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
   <title>NEFFREY INTERNATIONAL LIMITED | Projects</title>
 
   <style>
-  /* Floating Header */
-  header {
-    background: #0d2c54;
-    color: #fff;
-    padding: 12px 24px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    box-shadow: 0 4px 20px rgba(0,0,0,0.25);
-    position: fixed;
-    top: 8%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    border-radius: 50px;
-    width: 85%;
-    max-width: 1200px;
-    z-index: 1000;
-    backdrop-filter: blur(8px);
-    background: rgba(13, 44, 84, 0.9);
-    transition: all 0.3s ease;
-  }
+    /* ===== Global Styles ===== */
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      line-height: 1.6;
+      background-color: #f9f9f9;
+      color: #333;
+    }
 
-  /* Logo */
-  .logo-container {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    flex: 1;
-  }
-  .logo-container img {
-    height: 40px;
-    width: auto;
-    border-radius: 10px;
-    border: 2px solid #fff;
-  }
-  .logo-container h1 {
-    font-size: 18px;
-    margin: 0;
-    color: #fff;
-    font-weight: bold;
-    letter-spacing: 1px;
-    white-space: nowrap;
-  }
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
 
-  /* Nav */
-  nav {
-    display: flex;
-    gap: 20px;
-    align-items: center;
-    transition: max-height 0.3s ease, opacity 0.3s ease;
-  }
-  nav a {
-    font-weight: 600;
-    color: #fff;
-    text-decoration: none;
-    transition: color 0.3s ease, border-bottom 0.3s ease;
-    padding-bottom: 4px;
-  }
-  nav a:hover {
-    color: #f5862b;
-    border-bottom: 2px solid #f5862b;
-  }
-
-  /* Mobile Menu Button */
-  .menu-toggle {
-    display: none;
-    font-size: 26px;
-    cursor: pointer;
-    color: #fff;
-    background: none;
-    border: none;
-  }
-
-  /* ==================== Responsive ==================== */
-  @media (max-width: 768px) {
+    /* ===== Floating Header ===== */
     header {
-      flex-direction: column;
-      align-items: flex-start;
-      padding: 10px 16px;
-      border-radius: 15px;
-      width: 95%;
-      top: 0;
+      background: rgba(13, 44, 84, 0.95);
+      color: #fff;
+      padding: 14px 24px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.25);
+      position: fixed;
+      top: 8%;
       left: 50%;
-      transform: translateX(-50%);
+      transform: translate(-50%, -50%);
+      border-radius: 50px;
+      width: 90%;
+      max-width: 1200px;
+      z-index: 1000;
+      backdrop-filter: blur(8px);
     }
 
     .logo-container {
-      justify-content: space-between;
-      width: 100%;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .logo-container img {
+      height: 40px;
+      width: auto;
+      border-radius: 6px;
     }
 
     .logo-container h1 {
-      font-size: 16px;
+      font-size: 18px;
+      margin: 0;
+      letter-spacing: 1px;
+      white-space: nowrap;
     }
 
     nav {
-      flex-direction: column;
-      align-items: flex-start;
-      width: 100%;
-      gap: 15px;
-      margin-top: 12px;
-      max-height: 0;
-      overflow: hidden;
-      opacity: 0;
-      background: rgba(13, 44, 84, 0.95);
-      border-radius: 0 0 15px 15px;
-      padding: 0 20px;
+      display: flex;
+      gap: 18px;
+      transition: all 0.3s ease;
     }
 
-    nav.open {
-      max-height: 400px;
-      opacity: 1;
-      padding: 15px 20px;
+    nav a {
+      font-weight: bold;
+      color: #fff;
+      transition: color 0.3s ease, border-bottom 0.3s ease;
+      padding-bottom: 4px;
     }
 
+    nav a:hover {
+      color: #f4a261;
+      border-bottom: 2px solid #f4a261;
+    }
+
+    nav a.active {
+      color: #f4a261;
+      border-bottom: 2px solid #f4a261;
+    }
+
+    /* ===== Hamburger Button ===== */
     .menu-toggle {
+      display: none;
+      font-size: 28px;
+      color: #fff;
+      background: none;
+      border: none;
+      cursor: pointer;
+    }
+
+    /* ===== Mobile Menu ===== */
+    @media (max-width: 768px) {
+      header {
+        flex-wrap: wrap;
+        border-radius: 25px;
+      }
+
+      .menu-toggle {
+        display: block;
+      }
+
+      nav {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        background: rgba(13, 44, 84, 0.98);
+        border-radius: 15px;
+        margin-top: 12px;
+        padding: 10px 0;
+      }
+
+      nav a {
+        padding: 12px;
+        text-align: center;
+        width: 100%;
+        display: block;
+        border-bottom: 1px solid rgba(255,255,255,0.15);
+      }
+
+      nav a:last-child {
+        border-bottom: none;
+      }
+
+      nav.active {
+        display: flex;
+      }
+    }
+
+    /* ===== Hero Section ===== */
+    .hero {
+      background: linear-gradient(rgba(13,44,84,0.7), rgba(13,44,84,0.7)),
+        url('assets/images/aligned.jpg') no-repeat center center/cover;
+      color: white;
+      padding: 100px 20px;
+      text-align: center;
+    }
+
+    .hero h2 {
+      font-size: 42px;
+      margin-bottom: 10px;
+      text-shadow: 2px 2px 6px rgba(0,0,0,0.6);
+    }
+
+    .hero p {
+      font-size: 18px;
+    }
+
+    /* ===== Projects Gallery ===== */
+    .gallery {
+      padding: 60px 20px;
+      max-width: 1200px;
+      margin: auto;
+    }
+
+    .gallery h3 {
+      text-align: center;
+      font-size: 30px;
+      color: #0d2c54;
+      margin-bottom: 40px;
+    }
+
+    .gallery-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 25px;
+    }
+
+    .gallery-item {
+      position: relative;
+      overflow: hidden;
+      border-radius: 10px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+      cursor: pointer;
+      background: #fff;
+    }
+
+    .gallery-item img {
+      width: 100%;
+      height: 260px;
+      object-fit: cover;
+      transition: transform 0.4s ease;
       display: block;
     }
-  }
+
+    .gallery-item:hover img {
+      transform: scale(1.08);
+    }
+
+    .gallery-info {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background: rgba(0, 0, 0, 0.65);
+      color: white;
+      padding: 15px;
+      text-align: center;
+      opacity: 0;
+      transition: opacity 0.4s ease;
+    }
+
+    .gallery-item:hover .gallery-info {
+      opacity: 1;
+    }
+
+    .gallery-info h4 {
+      margin: 5px 0;
+      color: #f4a261;
+    }
+
+    /* ===== CTA Section ===== */
+    .cta {
+      background: #0d2c54;
+      color: #fff;
+      text-align: center;
+      padding: 60px 20px;
+      margin-top: 50px;
+    }
+
+    .cta h3 {
+      font-size: 28px;
+      margin-bottom: 15px;
+    }
+
+    .cta a {
+      display: inline-block;
+      background: #f4a261;
+      color: #fff;
+      padding: 12px 25px;
+      border-radius: 6px;
+      font-weight: bold;
+      transition: background 0.3s ease;
+    }
+
+    .cta a:hover {
+      background: #e76f51;
+    }
+
+    /* ===== Footer ===== */
+    footer {
+      background: #0d2c54;
+      color: #fff;
+      padding: 40px 20px 20px;
+    }
+
+    .footer-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 30px;
+      max-width: 1100px;
+      margin: auto;
+    }
+
+    .footer-grid h4 {
+      margin-bottom: 12px;
+      font-size: 17px;
+      border-bottom: 2px solid #f4a261;
+      display: inline-block;
+      padding-bottom: 4px;
+    }
+
+    .footer-grid p,
+    .footer-grid ul {
+      font-size: 14px;
+      line-height: 1.6;
+    }
+
+    .footer-grid ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    .footer-grid ul li {
+      margin: 8px 0;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .footer-grid ul li i {
+      color: #f4a261;
+    }
+
+    .footer-grid ul li a {
+      color: #ddd;
+      transition: color 0.3s ease;
+    }
+
+    .footer-grid ul li a:hover {
+      color: #f4a261;
+    }
+
+    .social-icons {
+      display: flex;
+      gap: 12px;
+      margin-top: 12px;
+    }
+
+    .social-icons a {
+      color: #fff;
+      font-size: 20px;
+      transition: color 0.3s ease;
+    }
+
+    .social-icons a:hover {
+      color: #f4a261;
+    }
+
+    .footer-bottom {
+      text-align: center;
+      margin-top: 20px;
+      border-top: 1px solid rgba(255,255,255,0.2);
+      padding-top: 10px;
+      font-size: 13px;
+    }
   </style>
 </head>
 <body>
@@ -135,10 +327,8 @@
     <div class="logo-container">
       <img src="assets/images/logo.png" alt="Company Logo">
       <h1>NEFFREY INTERNATIONAL LIMITED</h1>
-      <button class="menu-toggle" aria-label="Toggle navigation" aria-expanded="false">
-        <i class="bi bi-list"></i>
-      </button>
     </div>
+    <button class="menu-toggle"><i class="bi bi-list"></i></button>
     <nav>
       <a href="index.html">Home</a>
       <a href="about.html">About</a>
@@ -166,7 +356,7 @@
         </div>
       </div>
       <div class="gallery-item">
-        <img src="assets/images/deliv.jpg" alt="Dumping & Waste Removal">
+        <img src="assets/images/deliv.jpg" alt="Dumping Project">
         <div class="gallery-info">
           <h4>Dumping & Waste Removal</h4>
           <p>Safe disposal of construction debris and soil.</p>
@@ -237,29 +427,13 @@
     </div>
   </footer>
 
+  <!-- Script for Hamburger Menu -->
   <script>
-    const toggle = document.querySelector('.menu-toggle');
-    const nav = document.querySelector('header nav');
+    const toggleBtn = document.querySelector('.menu-toggle');
+    const nav = document.querySelector('nav');
 
-    function setExpanded(state) {
-      toggle.setAttribute('aria-expanded', state ? 'true' : 'false');
-      nav.classList.toggle('open', state);
-    }
-
-    toggle.addEventListener('click', () => {
-      const isOpen = nav.classList.contains('open');
-      setExpanded(!isOpen);
-    });
-
-    // Close menu after clicking a link (mobile UX)
-    nav.querySelectorAll('a').forEach(a => {
-      a.addEventListener('click', () => setExpanded(false));
-    });
-
-    // Reset menu if resized from mobile -> desktop
-    const mq = window.matchMedia('(min-width: 769px)');
-    mq.addEventListener('change', e => {
-      if (e.matches) setExpanded(false);
+    toggleBtn.addEventListener('click', () => {
+      nav.classList.toggle('active');
     });
   </script>
 </body>
