@@ -58,6 +58,7 @@
       font-size: 18px;
       margin: 0;
       letter-spacing: 1px;
+      white-space: nowrap;
     }
 
     nav {
@@ -92,11 +93,12 @@
     .nav-links.active {
       display: block;
       position: absolute;
-      top: 60px;
+      top: 70px;
       right: 20px;
       background: #0d2c54;
       padding: 15px;
       border-radius: 8px;
+      width: 200px;
     }
 
     .nav-links.active a {
@@ -356,13 +358,11 @@
     @media (max-width: 768px) {
       header {
         flex-wrap: wrap;
-        justify-content: space-between;
       }
 
       nav {
         display: none;
         flex-direction: column;
-        width: 100%;
       }
 
       .menu-toggle {
@@ -526,21 +526,31 @@
         </ul>
       </div>
       <div>
-         <h4>Contact</h4>
-      <p><i class="bi bi-geo-alt"></i> Nairobi, Kenya</p>
-      <p><i class="bi bi-telephone"></i> +254 700 123 456</p>
-      <p><i class="bi bi-envelope"></i> info@neffrey.com</p>
-      <div class="social-icons">
-        <a href="#"><i class="bi bi-facebook"></i></a>
-        <a href="#"><i class="bi bi-twitter"></i></a>
-        <a href="#"><i class="bi bi-linkedin"></i></a>
+        <h4>Contact</h4>
+        <p><i class="bi bi-geo-alt"></i> Nairobi, Kenya</p>
+        <p><i class="bi bi-telephone"></i> +254 700 123 456</p>
+        <p><i class="bi bi-envelope"></i> info@neffrey.com</p>
+        <div class="social-icons">
+          <a href="#"><i class="bi bi-facebook"></i></a>
+          <a href="#"><i class="bi bi-twitter"></i></a>
+          <a href="#"><i class="bi bi-linkedin"></i></a>
+        </div>
       </div>
     </div>
-  </div>
-  <div class="footer-bottom">
-    <p>© 2025 NEFFREY INTERNATIONAL LIMITED | All Rights Reserved</p>
-  </div>
-</footer>
+    <div class="footer-bottom">
+      <p>© 2025 NEFFREY INTERNATIONAL LIMITED | All Rights Reserved</p>
+    </div>
+  </footer>
+
+  <!-- Mobile Menu Script -->
+  <script>
+    const menuToggle = document.querySelector(".menu-toggle");
+    const navLinks = document.querySelector(".nav-links");
+
+    menuToggle.addEventListener("click", () => {
+      navLinks.classList.toggle("active");
+    });
+  </script>
 
 </body>
 </html>
